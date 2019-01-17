@@ -16,8 +16,23 @@ public class QueueADT
 	int dequeue()
 	{
 		int deleted = 0;
+		// Checking method if it is empty or not
+		if(isEmpty())
+		{
+		System.out.println("Can't Dequeue!");
+		}
+		else
+			{
+				deleted = queue[0];
+				// Shifting the elements
+				for(int i =0; i < queue.length-1; i++)
+				{
+					queue[i]=queue[i+1];
+				}
+			queue[queue.length-1]= Integer.parseInt(null);
+		   }
 
-
+		// Print the deleted element
 		return deleted;
 	}
 
